@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tCG-Me-Zpb">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Magic Walks View Controller-->
+        <scene sceneID="O4I-VJ-qil">
+            <objects>
+                <viewController id="H9b-oy-QSk" customClass="MagicWalksViewController" customModule="MovementCohort1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nrl-4k-WCN">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Walks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kf2-Nr-wf5">
+                                <rect key="frame" x="174" y="415.66666666666669" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qDs-sI-8uK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kf2-Nr-wf5" firstAttribute="centerX" secondItem="nrl-4k-WCN" secondAttribute="centerX" id="bMM-R3-MVw"/>
+                            <constraint firstItem="kf2-Nr-wf5" firstAttribute="centerY" secondItem="nrl-4k-WCN" secondAttribute="centerY" id="eFJ-ee-50Q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QDE-pZ-DpB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e9Q-hr-BhM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1181" y="662"/>
+        </scene>
+        <!--Walks-->
+        <scene sceneID="ViL-QR-Ano">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tCG-Me-Zpb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Walks" image="figure.walk" catalog="system" id="TmJ-fY-H1V"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eVx-WH-g19">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="H9b-oy-QSk" kind="relationship" relationship="rootViewController" id="LIM-qq-nDZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Riw-SA-76k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="461.83206106870227" y="662.67605633802816"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="figure.walk" catalog="system" width="95" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
