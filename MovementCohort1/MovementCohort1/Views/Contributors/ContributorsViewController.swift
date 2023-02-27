@@ -7,6 +7,8 @@ enum ListType {
 
 class ContributorsViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var btnListGrid: UIButton!
+   
     private var listType: ListType = .list
     
     private var dataSource: UICollectionViewDiffableDataSource<Section, Item>!
@@ -48,6 +50,8 @@ class ContributorsViewController: UIViewController {
         ]
         
         collectionView.register(cells: cells)
+        collectionView.register(ContributorCell.nib, forSupplementaryViewOfKind: ContributorCell.kind, withReuseIdentifier: ContributorCell.reuseIdentifier)
+        collectionView.register(ContributorGridCell.nib, forSupplementaryViewOfKind: ContributorGridCell.kind, withReuseIdentifier: ContributorGridCell.reuseIdentifier)
         collectionView.collectionViewLayout = collectionViewLayout
     }
     
@@ -81,6 +85,8 @@ class ContributorsViewController: UIViewController {
         dataSource.apply(snapshot, animatingDifferences: false)
     }
     
+    
+    
     private func configureDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: collectionView) { [weak self]
             (collectionView, indexPath, item) in
@@ -96,7 +102,25 @@ class ContributorsViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func onListSwitchTapped(_ sender: Any) {
+        if listType == .list {
+            listType = .grid
+            btnListGrid.image = UIImage(named: )
+            createListData()
+        } else {
+            listType = .list
+            btnListGrid.image = UIImage(named: )
+            createGridData()
+        }
+    }
+    
+    
+    
+    
+    
 }
+
 
 
 
