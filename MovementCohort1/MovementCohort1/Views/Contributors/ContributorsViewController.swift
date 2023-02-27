@@ -105,13 +105,15 @@ class ContributorsViewController: UIViewController {
     
     @IBAction func onListSwitchTapped(_ sender: Any) {
         if listType == .list {
-            listType = .grid
-            btnListGrid.image = UIImage(named: )
             createListData()
+            listType = .grid
+            btnListGrid.setImage(UIImage(systemName: "rectangle.grid.1x2.fill"), for: .normal)
+            
         } else {
-            listType = .list
-            btnListGrid.image = UIImage(named: )
             createGridData()
+            listType = .list
+            btnListGrid.setImage(UIImage(systemName: "square.grid.2x2.fill"), for: .normal)
+            
         }
     }
     
