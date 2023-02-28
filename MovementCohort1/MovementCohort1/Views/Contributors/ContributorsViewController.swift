@@ -8,7 +8,7 @@ enum ListType {
 class ContributorsViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var btnListGrid: UIButton!
-   
+    
     private var listType: ListType = .list
     
     private var dataSource: UICollectionViewDiffableDataSource<Section, Item>!
@@ -41,6 +41,7 @@ class ContributorsViewController: UIViewController {
         setupCollectionView()
         configureDataSource()
         createListData()
+        btnListGrid.isHidden = false
     }
     
     private func setupCollectionView() {
@@ -96,9 +97,13 @@ class ContributorsViewController: UIViewController {
             let sectionType = snapshot.sectionIdentifiers[indexPath.section].type
             
             switch sectionType {
-            default:
+            case .list:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ContributorCell.reuseIdentifier, for: indexPath)
                 return cell
+            case.grid:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ContributorGridCell.reuseIdentifier, for: indexPath)
+                return cell
+            default: return nil
             }
         }
     }
@@ -107,45 +112,17 @@ class ContributorsViewController: UIViewController {
         if listType == .list {
             createListData()
             listType = .grid
-            btnListGrid.setImage(UIImage(systemName: "rectangle.grid.1x2.fill"), for: .normal)
+            btnListGrid.setImage(UIImage(systemName: "square.grid.2x2.fill" ), for: .normal)
+            btnListGrid.isHidden = false
             
         } else {
             createGridData()
             listType = .list
-            btnListGrid.setImage(UIImage(systemName: "square.grid.2x2.fill"), for: .normal)
+            btnListGrid.setImage(UIImage(systemName: "rectangle.grid.1x2.fill"), for: .normal)
             
         }
     }
-    
-    
-    
-    
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
