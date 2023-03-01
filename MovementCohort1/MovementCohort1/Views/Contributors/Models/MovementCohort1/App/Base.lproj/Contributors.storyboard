@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D64-4T-pDp">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="WarsawGothic.otf">
+            <string>WarsawGothic</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Contributors View Controller-->
+        <scene sceneID="gxA-v9-cTp">
+            <objects>
+                <viewController id="DQa-E2-0ha" customClass="ContributorsViewController" customModule="MovementCohort1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cqK-Pa-0rS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTRIBUTORS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftb-IT-y64">
+                                <rect key="frame" x="20" y="114.00000000000001" width="171" height="50.666666666666671"/>
+                                <fontDescription key="fontDescription" name="WarsawGothic" family="Warsaw Gothic" pointSize="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUI-g7-xgT">
+                                <rect key="frame" x="340" y="103" width="53" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="EF4-eq-FFp"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="onListSwitchTapped:" destination="DQa-E2-0ha" eventType="touchUpInside" id="Y4N-z1-Fhu"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UEf-hu-mOL">
+                                <rect key="frame" x="20" y="182.66666666666669" width="353" height="669.33333333333326"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sTE-1g-jkZ">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gam-oB-gkq"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gam-oB-gkq" firstAttribute="trailing" secondItem="LUI-g7-xgT" secondAttribute="trailing" constant="20" id="Hqs-3K-aGy"/>
+                            <constraint firstItem="ftb-IT-y64" firstAttribute="leading" secondItem="gam-oB-gkq" secondAttribute="leading" constant="20" id="IPZ-Fk-fQL"/>
+                            <constraint firstItem="ftb-IT-y64" firstAttribute="top" secondItem="gam-oB-gkq" secondAttribute="top" constant="11" id="KHf-Y3-W1S"/>
+                            <constraint firstAttribute="bottom" secondItem="UEf-hu-mOL" secondAttribute="bottom" id="S3e-Va-5kG"/>
+                            <constraint firstItem="UEf-hu-mOL" firstAttribute="top" secondItem="ftb-IT-y64" secondAttribute="bottom" constant="18" id="Yn3-Vj-NYj"/>
+                            <constraint firstItem="UEf-hu-mOL" firstAttribute="leading" secondItem="gam-oB-gkq" secondAttribute="leading" constant="20" id="hb3-Q1-siV"/>
+                            <constraint firstItem="gam-oB-gkq" firstAttribute="trailing" secondItem="UEf-hu-mOL" secondAttribute="trailing" constant="20" id="kcX-Xx-oH8"/>
+                            <constraint firstItem="LUI-g7-xgT" firstAttribute="top" secondItem="gam-oB-gkq" secondAttribute="top" constant="11" id="mlk-Fu-Ybn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="r2R-2Y-IwH"/>
+                    <connections>
+                        <outlet property="btnListGrid" destination="LUI-g7-xgT" id="91S-cv-bg7"/>
+                        <outlet property="collectionView" destination="UEf-hu-mOL" id="wFA-uR-Y5s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9YA-Xx-PuN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1382.4427480916031" y="-706.33802816901414"/>
+        </scene>
+        <!--Contributors-->
+        <scene sceneID="N4a-sT-x0B">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D64-4T-pDp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Contributors" image="person.3.fill" catalog="system" id="F09-uH-SJc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="99K-0c-n9A">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DQa-E2-0ha" kind="relationship" relationship="rootViewController" id="6oG-Pf-PC9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tru-3L-07u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="461.83206106870227" y="-706.33802816901414"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+    </resources>
+</document>
