@@ -22,7 +22,6 @@
 		46F2097C2988B11800DB9F7C /* WalksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F2097B2988B11800DB9F7C /* WalksViewController.swift */; };
 		46F2097E2988B12D00DB9F7C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F2097D2988B12D00DB9F7C /* LoginViewController.swift */; };
 		46F209822988BA4400DB9F7C /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F209812988BA4400DB9F7C /* RegistrationViewController.swift */; };
-		9F06F3ED29A6CC9100D64035 /* Photograph Signature.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F06F3EC29A6CC9100D64035 /* Photograph Signature.ttf */; };
 		9F138FA929AD1E8A005A130F /* HomeCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F138FA829AD1E8A005A130F /* HomeCardCell.xib */; };
 		9F138FAD29AD3518005A130F /* FilterBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F138FAC29AD3518005A130F /* FilterBackgroundView.swift */; };
 		9F20581E29A004ED00083194 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F20581C29A004ED00083194 /* FilterCell.swift */; };
@@ -42,7 +41,6 @@
 		9FF03BE92999F362009104F6 /* HomeHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF03BE72999F362009104F6 /* HomeHeaderCell.xib */; };
 		9FF03BEB2999F485009104F6 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF03BEA2999F485009104F6 /* Bundle.swift */; };
 		C4118C0529A959A20060086B /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4118C0229A959A20060086B /* UICollectionView+Extension.swift */; };
-		C4118C0629A959A20060086B /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4118C0329A959A20060086B /* UIView+IBInspectable.swift */; };
 		C4118C0729A959A20060086B /* RegisterableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4118C0429A959A20060086B /* RegisterableView.swift */; };
 		C4E7172829A924CE00FC1263 /* ContributorGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7172629A924CE00FC1263 /* ContributorGridCell.swift */; };
 		C4E7172929A924CE00FC1263 /* ContibutorGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4E7172729A924CE00FC1263 /* ContibutorGridCell.xib */; };
@@ -73,7 +71,6 @@
 		46F2097B2988B11800DB9F7C /* WalksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalksViewController.swift; sourceTree = "<group>"; };
 		46F2097D2988B12D00DB9F7C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		46F209812988BA4400DB9F7C /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		9F06F3EC29A6CC9100D64035 /* Photograph Signature.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Photograph Signature.ttf"; sourceTree = "<group>"; };
 		9F138FA829AD1E8A005A130F /* HomeCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCardCell.xib; sourceTree = "<group>"; };
 		9F138FAC29AD3518005A130F /* FilterBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBackgroundView.swift; sourceTree = "<group>"; };
 		9F20581C29A004ED00083194 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
@@ -93,7 +90,6 @@
 		9FF03BE72999F362009104F6 /* HomeHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderCell.xib; sourceTree = "<group>"; };
 		9FF03BEA2999F485009104F6 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		C4118C0229A959A20060086B /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
-		C4118C0329A959A20060086B /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
 		C4118C0429A959A20060086B /* RegisterableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterableView.swift; sourceTree = "<group>"; };
 		C4E7172629A924CE00FC1263 /* ContributorGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorGridCell.swift; sourceTree = "<group>"; };
 		C4E7172729A924CE00FC1263 /* ContibutorGridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContibutorGridCell.xib; sourceTree = "<group>"; };
@@ -249,7 +245,6 @@
 		9F42B5CA29A5D99C004FC976 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				9F06F3EC29A6CC9100D64035 /* Photograph Signature.ttf */,
 				9F757E5F29A66E57004A14B3 /* warsawgothic.otf */,
 			);
 			path = Fonts;
@@ -341,7 +336,6 @@
 			children = (
 				C4118C0429A959A20060086B /* RegisterableView.swift */,
 				C4118C0229A959A20060086B /* UICollectionView+Extension.swift */,
-				C4118C0329A959A20060086B /* UIView+IBInspectable.swift */,
 				C4EA1BFC29A69181007AF5E2 /* LayoutSection.swift */,
 			);
 			path = Utilities;
@@ -423,7 +417,6 @@
 				46F2095F2988B00600DB9F7C /* Main.storyboard in Resources */,
 				9F9C1C8529AFB85B0023BDF5 /* Theme.xcassets in Resources */,
 				9F20581F29A004ED00083194 /* FilterCell.xib in Resources */,
-				9F06F3ED29A6CC9100D64035 /* Photograph Signature.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,7 +449,6 @@
 				46F209742988B0CA00DB9F7C /* ContributorsViewController.swift in Sources */,
 				46F209822988BA4400DB9F7C /* RegistrationViewController.swift in Sources */,
 				C4EA1BF129A56FD1007AF5E2 /* ContributorSection.swift in Sources */,
-				C4118C0629A959A20060086B /* UIView+IBInspectable.swift in Sources */,
 				C4E7172829A924CE00FC1263 /* ContributorGridCell.swift in Sources */,
 				46F2097C2988B11800DB9F7C /* WalksViewController.swift in Sources */,
 				9FD8E0D329AD1BA200BC1417 /* FilterHeader.swift in Sources */,
