@@ -14,7 +14,7 @@ class MagicWalksViewController: UIViewController {
         super.viewDidLoad()
         initialize()
     }
-    
+   //Comment
     private func initialize() {
         setupMapView()
         addCustomPin()
