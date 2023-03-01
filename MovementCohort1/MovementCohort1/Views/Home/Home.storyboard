@@ -16,21 +16,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdb-72-5cy">
-                                <rect key="frame" x="173.66666666666666" y="415.66666666666669" width="46" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DmI-bq-pmK">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qwQ-7J-Hhd">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qQL-ot-fXA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Fdb-72-5cy" firstAttribute="centerY" secondItem="sIp-SX-6fr" secondAttribute="centerY" id="9UE-WE-Wha"/>
-                            <constraint firstItem="Fdb-72-5cy" firstAttribute="centerX" secondItem="sIp-SX-6fr" secondAttribute="centerX" id="Lua-W9-jOY"/>
+                            <constraint firstItem="qQL-ot-fXA" firstAttribute="trailing" secondItem="DmI-bq-pmK" secondAttribute="trailing" id="2HB-La-5Ht"/>
+                            <constraint firstItem="DmI-bq-pmK" firstAttribute="leading" secondItem="qQL-ot-fXA" secondAttribute="leading" id="6Qd-Da-YFE"/>
+                            <constraint firstItem="qQL-ot-fXA" firstAttribute="bottom" secondItem="DmI-bq-pmK" secondAttribute="bottom" id="dFW-fH-aFe"/>
+                            <constraint firstItem="DmI-bq-pmK" firstAttribute="top" secondItem="qQL-ot-fXA" secondAttribute="top" id="sGS-cv-eAG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SOn-rv-5yK"/>
+                    <connections>
+                        <outlet property="collectionView" destination="DmI-bq-pmK" id="tXo-VZ-6qp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nmm-38-ODr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
