@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tCG-Me-Zpb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tCG-Me-Zpb">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21504"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,30 +12,33 @@
         <!--Magic Walks View Controller-->
         <scene sceneID="O4I-VJ-qil">
             <objects>
-                <viewController id="H9b-oy-QSk" customClass="MagicWalksViewController" customModule="MovementCohort1" sceneMemberID="viewController">
+                <viewController id="H9b-oy-QSk" customClass="MagicWalksViewController" customModule="MovementCohort1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nrl-4k-WCN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Walks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kf2-Nr-wf5">
-                                <rect key="frame" x="174" y="415.66666666666669" width="45" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMo-K3-K6O">
+                                <rect key="frame" x="0.0" y="-6" width="393" height="911"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qDs-sI-8uK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kf2-Nr-wf5" firstAttribute="centerX" secondItem="nrl-4k-WCN" secondAttribute="centerX" id="bMM-R3-MVw"/>
-                            <constraint firstItem="kf2-Nr-wf5" firstAttribute="centerY" secondItem="nrl-4k-WCN" secondAttribute="centerY" id="eFJ-ee-50Q"/>
+                            <constraint firstItem="qDs-sI-8uK" firstAttribute="bottom" secondItem="XMo-K3-K6O" secondAttribute="bottom" constant="-87" id="7Gi-tv-GEx"/>
+                            <constraint firstItem="XMo-K3-K6O" firstAttribute="top" secondItem="qDs-sI-8uK" secondAttribute="top" constant="-109" id="LIK-No-dKE"/>
+                            <constraint firstItem="XMo-K3-K6O" firstAttribute="leading" secondItem="qDs-sI-8uK" secondAttribute="leading" id="auM-eU-hc2"/>
+                            <constraint firstItem="qDs-sI-8uK" firstAttribute="trailing" secondItem="XMo-K3-K6O" secondAttribute="trailing" id="pIQ-W7-EZu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QDE-pZ-DpB"/>
+                    <connections>
+                        <outlet property="mapView" destination="XMo-K3-K6O" id="VTU-64-tR4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e9Q-hr-BhM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1181" y="662"/>
+            <point key="canvasLocation" x="1135.1145038167938" y="669.0140845070423"/>
         </scene>
         <!--Walks-->
         <scene sceneID="ViL-QR-Ano">
