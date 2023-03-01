@@ -10,15 +10,111 @@ import UIKit
 class HomeViewController: UIViewController {
     
     //MARK: IBOutlets
-    @IBOutlet weak var lblTitle: UILabel!
-
+    @IBOutlet weak var collectionView: UICollectionView!
+    private var dataSource: UICollectionViewDiffableDataSource<HomeSection, HomeItem>!
+    let background = "background-element-kind"
+    
+    lazy var collectionViewLayout: UICollectionViewCompositionalLayout = {
+        let layout = UICollectionViewCompositionalLayout { [ weak self ] (sectionIndex, enviroment) ->
+            NSCollectionLayoutSection? in
+            guard let self = self else { return nil }
+            
+            let snapshot = self.dataSource.snapshot()
+            let sectionType = snapshot.sectionIdentifiers[sectionIndex].type
+            
+            switch sectionType {
+            case .scroller : return HomeLayoutSectionFactory.scroller()
+            case .card : return HomeLayoutSectionFactory.card()
+            case .filter : return HomeLayoutSectionFactory.filter()
+            default: return nil
+            }
+        }
+        layout.register(FilterBackgroundView.self, forDecorationViewOfKind: background)
+        return layout
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        initialize()
+    }
+    //MARK: Initialize
+    private func initialize() {
+        setUpCollectionViews()
+        configureDataSource()
+        configureSupplementaryView()
+    }
+    //MARK: Setup CollectionView
+    private func setUpCollectionViews() {
+        collectionView.register(HomeHeaderCell.nib, forCellWithReuseIdentifier: HomeHeaderCell.reuseIdentifer)
+        collectionView.register(FilterCell.nib, forCellWithReuseIdentifier: FilterCell.reuseIdentifer)
+        collectionView.register(HomeCardCell.nib, forCellWithReuseIdentifier: HomeCardCell.reuseIdentifer)
+        // Filter Section Header
+        collectionView.register(FilterHeader.nib, forSupplementaryViewOfKind: FilterHeader.kind, withReuseIdentifier: FilterHeader.reuseIdentifer)
+        
+        collectionView.collectionViewLayout = collectionViewLayout
+    }
+    //MARK: Config CollectionView
+    private func configureDataSource() {
+        dataSource = UICollectionViewDiffableDataSource<HomeSection, HomeItem>(collectionView: collectionView) { [weak self]
+            (collectionView, indexPath, item) in
+            guard let self = self else { return UICollectionViewCell() }
+            
+            let snapshot = self.dataSource.snapshot()
+            let sectionType = snapshot.sectionIdentifiers[indexPath.section].type
+            
+            switch sectionType {
+            case .scroller:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeHeaderCell.reuseIdentifer, for: indexPath)
+                return cell
+            case .filter:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterCell.reuseIdentifer, for: indexPath)
+                return cell
+            case .card:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCardCell.reuseIdentifer, for: indexPath)
+                return cell
+            default:
+                return nil
+            }
+        }
+            let sections = [
+                HomeSection(type: .scroller, items: [
+                HomeItem()
+                ]),
+                HomeSection(type: .filter, items: [
+                HomeItem(), HomeItem(), HomeItem(), HomeItem(),
+                HomeItem(), HomeItem(), HomeItem(), HomeItem(),
+                HomeItem(), HomeItem(), HomeItem(), HomeItem(),
+                HomeItem(), HomeItem(), HomeItem(), HomeItem()
+                ]),
+                HomeSection(type: .card, items: [
+                HomeItem(), HomeItem()
+                ])
+            ]
+        
+            var snapshot = NSDiffableDataSourceSnapshot<HomeSection, HomeItem>()
+            snapshot.appendSections(sections)
+            sections.forEach { snapshot.appendItems($0.items, toSection: $0) }
+            dataSource.apply(snapshot, animatingDifferences: false)
     }
     
+    private func configureSupplementaryView() {
+        dataSource.supplementaryViewProvider = { [ weak self ] (collectionView, kind, indexPath) in
+            guard let self = self else { return UICollectionReusableView() }
 
+            let snapshot = self.dataSource.snapshot()
+            let sectionKind = snapshot.sectionIdentifiers[indexPath.section].type
+
+            switch sectionKind {
+            case .filter:
+                let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: FilterHeader.kind, withReuseIdentifier: FilterHeader.reuseIdentifer, for: indexPath)
+                return sectionHeader
+
+            default: return nil
+            }
+        }
+    }
+}
+    
     /*
     // MARK: - Navigation
 
@@ -29,7 +125,9 @@ class HomeViewController: UIViewController {
     }
     */
 
-}
+
+
+
 
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
