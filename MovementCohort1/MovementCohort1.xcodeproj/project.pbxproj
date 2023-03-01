@@ -27,8 +27,8 @@
 		C4118C0729A959A20060086B /* RegisterableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4118C0429A959A20060086B /* RegisterableView.swift */; };
 		C4E7172829A924CE00FC1263 /* ContributorGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7172629A924CE00FC1263 /* ContributorGridCell.swift */; };
 		C4E7172929A924CE00FC1263 /* ContibutorGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4E7172729A924CE00FC1263 /* ContibutorGridCell.xib */; };
-		C4EA1BF129A56FD1007AF5E2 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EA1BF029A56FD1007AF5E2 /* Section.swift */; };
-		C4EA1BF329A56FE2007AF5E2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EA1BF229A56FE2007AF5E2 /* Item.swift */; };
+		C4EA1BF129A56FD1007AF5E2 /* ContributorSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EA1BF029A56FD1007AF5E2 /* ContributorSection.swift */; };
+		C4EA1BF329A56FE2007AF5E2 /* ContributorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EA1BF229A56FE2007AF5E2 /* ContributorItem.swift */; };
 		C4EA1BF729A5702F007AF5E2 /* ContributorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EA1BF529A5702F007AF5E2 /* ContributorCell.swift */; };
 		C4EA1BF829A5702F007AF5E2 /* ContributorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4EA1BF629A5702F007AF5E2 /* ContributorCell.xib */; };
 		C4EA1BFA29A57506007AF5E2 /* Photograph Signature.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4EA1BF929A57506007AF5E2 /* Photograph Signature.ttf */; };
@@ -59,8 +59,8 @@
 		C4118C0429A959A20060086B /* RegisterableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterableView.swift; sourceTree = "<group>"; };
 		C4E7172629A924CE00FC1263 /* ContributorGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorGridCell.swift; sourceTree = "<group>"; };
 		C4E7172729A924CE00FC1263 /* ContibutorGridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContibutorGridCell.xib; sourceTree = "<group>"; };
-		C4EA1BF029A56FD1007AF5E2 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
-		C4EA1BF229A56FE2007AF5E2 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		C4EA1BF029A56FD1007AF5E2 /* ContributorSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorSection.swift; sourceTree = "<group>"; };
+		C4EA1BF229A56FE2007AF5E2 /* ContributorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorItem.swift; sourceTree = "<group>"; };
 		C4EA1BF529A5702F007AF5E2 /* ContributorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorCell.swift; sourceTree = "<group>"; };
 		C4EA1BF629A5702F007AF5E2 /* ContributorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContributorCell.xib; sourceTree = "<group>"; };
 		C4EA1BF929A57506007AF5E2 /* Photograph Signature.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Photograph Signature.ttf"; sourceTree = "<group>"; };
@@ -198,8 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				46BF74EC29898184008E3DAE /* Contributors.storyboard */,
-				C4EA1BF029A56FD1007AF5E2 /* Section.swift */,
-				C4EA1BF229A56FE2007AF5E2 /* Item.swift */,
+				C4EA1BF029A56FD1007AF5E2 /* ContributorSection.swift */,
+				C4EA1BF229A56FE2007AF5E2 /* ContributorItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -309,14 +309,14 @@
 				46EDC2F4298974CE00EAF339 /* AppDelegate.swift in Sources */,
 				C4118C0729A959A20060086B /* RegisterableView.swift in Sources */,
 				C4EA1BF729A5702F007AF5E2 /* ContributorCell.swift in Sources */,
-				C4EA1BF329A56FE2007AF5E2 /* Item.swift in Sources */,
+				C4EA1BF329A56FE2007AF5E2 /* ContributorItem.swift in Sources */,
 				46EDC2F5298974CE00EAF339 /* SceneDelegate.swift in Sources */,
 				C4EA1BFD29A69181007AF5E2 /* LayoutSection.swift in Sources */,
 				46F2097E2988B12D00DB9F7C /* LoginViewController.swift in Sources */,
 				C4118C0529A959A20060086B /* UICollectionView+Extension.swift in Sources */,
 				46F209742988B0CA00DB9F7C /* ContributorsViewController.swift in Sources */,
 				46F209822988BA4400DB9F7C /* RegistrationViewController.swift in Sources */,
-				C4EA1BF129A56FD1007AF5E2 /* Section.swift in Sources */,
+				C4EA1BF129A56FD1007AF5E2 /* ContributorSection.swift in Sources */,
 				C4118C0629A959A20060086B /* UIView+IBInspectable.swift in Sources */,
 				C4E7172829A924CE00FC1263 /* ContributorGridCell.swift in Sources */,
 				46F2097C2988B11800DB9F7C /* WalksViewController.swift in Sources */,

@@ -1,7 +1,7 @@
 import Foundation
 
 
-struct Item: Hashable {
+struct ContributorItem: Hashable {
     let id = UUID()
     let title: String
     let pubDate: String
@@ -10,8 +10,6 @@ struct Item: Hashable {
     init(title: String = "", pubDate: String =  "", image: String = "" ) {
         self.title = title
         self.pubDate = pubDate
-        self.image = image 
-        
-        
-}
+        self.image = image
+    }
 }

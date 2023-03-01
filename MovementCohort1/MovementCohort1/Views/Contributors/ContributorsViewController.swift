@@ -11,9 +11,9 @@ class ContributorsViewController: UIViewController {
     
     private var listType: ListType = .list
     
-    private var dataSource: UICollectionViewDiffableDataSource<Section, Item>!
-    private var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
-    private var sections: [Section] = []
+    private var dataSource: UICollectionViewDiffableDataSource<ContributorSection, ContributorItem>!
+    private var snapshot = NSDiffableDataSourceSnapshot<ContributorSection, ContributorItem>()
+    private var sections: [ContributorSection] = []
     
     lazy var collectionViewLayout: UICollectionViewLayout = {
         let layout = UICollectionViewCompositionalLayout { [weak self] (sectionIndex, environment) -> NSCollectionLayoutSection? in
@@ -58,14 +58,14 @@ class ContributorsViewController: UIViewController {
     
     func createListData() {
         sections = [
-            Section(type: .list, items: [
-                Item(), Item(), Item(), Item(),
-                Item(), Item(), Item(), Item(),
-                Item(), Item(), Item(), Item()
+            ContributorSection(type: .list, items: [
+                ContributorItem(), ContributorItem(), ContributorItem(), ContributorItem(),
+                ContributorItem(), ContributorItem(), ContributorItem(), ContributorItem(),
+                ContributorItem(), ContributorItem(), ContributorItem(), ContributorItem()
             ])
         ]
         
-        snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
+        snapshot = NSDiffableDataSourceSnapshot<ContributorSection, ContributorItem>()
         snapshot.appendSections(sections)
         sections.forEach { snapshot.appendItems($0.items, toSection: $0) }
         dataSource.apply(snapshot, animatingDifferences: false)
@@ -73,14 +73,14 @@ class ContributorsViewController: UIViewController {
     
     func createGridData() {
         sections = [
-            Section(type: .grid, items: [
-                Item(), Item(), Item(), Item(),
-                Item(), Item(), Item(), Item(),
-                Item(), Item(), Item(), Item()
+            ContributorSection(type: .grid, items: [
+                ContributorItem(), ContributorItem(), ContributorItem(), ContributorItem(),
+                ContributorItem(), ContributorItem(), ContributorItem(), ContributorItem(),
+                ContributorItem(), ContributorItem(), ContributorItem(), ContributorItem()
             ])
         ]
         
-        snapshot = NSDiffableDataSourceSnapshot<Section,Item>()
+        snapshot = NSDiffableDataSourceSnapshot<ContributorSection,ContributorItem>()
         snapshot.appendSections(sections)
         sections.forEach { snapshot.appendItems($0.items, toSection: $0) }
         dataSource.apply(snapshot, animatingDifferences: false)
@@ -89,7 +89,7 @@ class ContributorsViewController: UIViewController {
     
     
     private func configureDataSource() {
-        dataSource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: collectionView) { [weak self]
+        dataSource = UICollectionViewDiffableDataSource<ContributorSection, ContributorItem>(collectionView: collectionView) { [weak self]
             (collectionView, indexPath, item) in
             guard let self = self else { return UICollectionViewCell() }
             
@@ -123,9 +123,6 @@ class ContributorsViewController: UIViewController {
         }
     }
 }
-
-
-
 
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
