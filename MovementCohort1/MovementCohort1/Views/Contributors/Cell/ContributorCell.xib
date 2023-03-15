@@ -5,13 +5,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="Photograph Signature.ttf">
             <string>PhotographSignature</string>
         </array>
-        <array key="WarsawGothic.otf">
+        <array key="warsawgothic.otf">
             <string>WarsawGothic</string>
         </array>
     </customFonts>
@@ -28,10 +29,10 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y8I-LO-BhM">
                         <rect key="frame" x="0.0" y="0.0" width="344" height="200"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dkd-gf-glW">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dkd-gf-glW" userLabel="BGView">
                                 <rect key="frame" x="0.0" y="50" width="344" height="150"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1yN-ue-7oA">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1yN-ue-7oA" userLabel="TitleView">
                                         <rect key="frame" x="0.0" y="105" width="344" height="45"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOUTH STORYTELLER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lah-2i-riw">
@@ -47,11 +48,11 @@
                                             <constraint firstAttribute="height" constant="45" id="Rzj-ds-dAP"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Khadia" translatesAutoresizingMaskIntoConstraints="NO" id="5dK-Yy-OOL">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="khadia-header" translatesAutoresizingMaskIntoConstraints="NO" id="5dK-Yy-OOL">
                                         <rect key="frame" x="0.0" y="-45" width="190" height="150"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4cG-ju-Y1m">
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4cG-ju-Y1m" userLabel="NameView">
                                         <rect key="frame" x="261" y="18" width="83" height="81"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
@@ -77,7 +78,11 @@
                                     <constraint firstAttribute="bottom" secondItem="1yN-ue-7oA" secondAttribute="bottom" id="0xZ-k5-Imz"/>
                                     <constraint firstItem="1yN-ue-7oA" firstAttribute="leading" secondItem="Dkd-gf-glW" secondAttribute="leading" id="5Cv-JV-RYZ"/>
                                     <constraint firstAttribute="trailing" secondItem="1yN-ue-7oA" secondAttribute="trailing" id="8fh-0l-aXS"/>
+                                    <constraint firstItem="5dK-Yy-OOL" firstAttribute="leading" secondItem="Dkd-gf-glW" secondAttribute="leading" id="Rdj-DI-3lf"/>
+                                    <constraint firstAttribute="bottom" secondItem="5dK-Yy-OOL" secondAttribute="bottom" constant="45" id="bKs-qb-hfy"/>
                                     <constraint firstAttribute="height" constant="150" id="utm-bv-fhZ"/>
+                                    <constraint firstItem="5dK-Yy-OOL" firstAttribute="top" secondItem="Dkd-gf-glW" secondAttribute="top" constant="-45" id="wpg-aG-P2l"/>
+                                    <constraint firstAttribute="trailing" secondItem="5dK-Yy-OOL" secondAttribute="trailing" constant="154" id="z7t-dF-duL"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -86,7 +91,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
                         <constraints>
                             <constraint firstItem="Dkd-gf-glW" firstAttribute="leading" secondItem="y8I-LO-BhM" secondAttribute="leading" id="39m-zc-Oia"/>
                             <constraint firstAttribute="bottom" secondItem="Dkd-gf-glW" secondAttribute="bottom" id="MDO-48-9UF"/>
@@ -112,7 +117,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Khadia" width="380" height="328"/>
+        <image name="khadia-header" width="380" height="328"/>
         <namedColor name="backgroundColor">
             <color red="0.094117647058823528" green="0.094117647058823528" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -122,5 +127,11 @@
         <namedColor name="titleBackgroundColor">
             <color red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
