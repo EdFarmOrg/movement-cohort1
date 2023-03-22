@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D64-4T-pDp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="WarsawGothic.otf">
+        <array key="warsawgothic.otf">
             <string>WarsawGothic</string>
         </array>
     </customFonts>
@@ -15,19 +15,19 @@
         <!--Contributors View Controller-->
         <scene sceneID="gxA-v9-cTp">
             <objects>
-                <viewController id="DQa-E2-0ha" customClass="ContributorsViewController" customModule="MovementCohort1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContributorsViewController" id="DQa-E2-0ha" customClass="ContributorsViewController" customModule="MovementCohort1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cqK-Pa-0rS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTRIBUTORS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftb-IT-y64">
-                                <rect key="frame" x="20" y="114.00000000000001" width="171" height="50.666666666666671"/>
+                                <rect key="frame" x="20" y="70" width="171" height="50.666666666666657"/>
                                 <fontDescription key="fontDescription" name="WarsawGothic" family="Warsaw Gothic" pointSize="42"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UEf-hu-mOL">
-                                <rect key="frame" x="20" y="182.66666666666669" width="353" height="669.33333333333326"/>
+                                <rect key="frame" x="20" y="138.66666666666669" width="353" height="713.33333333333326"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sTE-1g-jkZ">
                                     <size key="itemSize" width="128" height="128"/>
@@ -38,7 +38,7 @@
                                 <cells/>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUI-g7-xgT">
-                                <rect key="frame" x="320" y="110" width="53" height="34"/>
+                                <rect key="frame" x="320" y="66" width="53" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="EF4-eq-FFp"/>
                                 </constraints>
@@ -71,30 +71,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9YA-Xx-PuN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1382.4427480916031" y="-706.33802816901414"/>
-        </scene>
-        <!--Contributors-->
-        <scene sceneID="N4a-sT-x0B">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D64-4T-pDp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Contributors" image="person.3.fill" catalog="system" id="F09-uH-SJc"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="99K-0c-n9A">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="DQa-E2-0ha" kind="relationship" relationship="rootViewController" id="6oG-Pf-PC9"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tru-3L-07u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="461.83206106870227" y="-706.33802816901414"/>
+            <point key="canvasLocation" x="984" y="-711"/>
         </scene>
     </scenes>
     <resources>
-        <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="rectangle.grid.2x2.fill" catalog="system" width="128" height="97"/>
     </resources>
 </document>
