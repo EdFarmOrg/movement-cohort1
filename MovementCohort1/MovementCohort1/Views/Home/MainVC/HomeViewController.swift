@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, Storyboarded {
     
     //MARK: IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
@@ -37,6 +37,10 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         initialize()
     }
+    
+    func start() {
+    }
+    
     //MARK: Initialize
     private func initialize() {
         setUpCollectionViews()

@@ -1,7 +1,7 @@
 import UIKit
 import MapKit
 
-class MagicWalksViewController: UIViewController {
+class WalksViewController: UIViewController, Storyboarded {
     let birmingham = CLLocationCoordinate2D(latitude: 33.543682, longitude: -86.779633)
     let locations = [["title": "EdFarm", "latitude": 33.517070, "longitude": -86.808441],
         ["title":"Fred Shuttlesworth Statue", "latitude": 33.530050, "longitude": -86.826680],
@@ -14,7 +14,11 @@ class MagicWalksViewController: UIViewController {
         super.viewDidLoad()
         initialize()
     }
-   //Comment
+    
+    func start() {
+        
+    }
+  
     private func initialize() {
         setupMapView()
         addCustomPin()

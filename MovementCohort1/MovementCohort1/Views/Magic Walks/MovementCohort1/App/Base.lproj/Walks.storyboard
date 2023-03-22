@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tCG-Me-Zpb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21504"/>
@@ -9,16 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Magic Walks View Controller-->
+        <!--Walks View Controller-->
         <scene sceneID="O4I-VJ-qil">
             <objects>
-                <viewController id="H9b-oy-QSk" customClass="MagicWalksViewController" customModule="MovementCohort1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WalksViewController" id="H9b-oy-QSk" customClass="WalksViewController" customModule="MovementCohort1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nrl-4k-WCN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMo-K3-K6O">
-                                <rect key="frame" x="0.0" y="-6" width="393" height="911"/>
+                                <rect key="frame" x="0.0" y="-50" width="393" height="955"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                         </subviews>
@@ -40,28 +40,8 @@
             </objects>
             <point key="canvasLocation" x="1135.1145038167938" y="669.0140845070423"/>
         </scene>
-        <!--Walks-->
-        <scene sceneID="ViL-QR-Ano">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tCG-Me-Zpb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Walks" image="figure.walk" catalog="system" id="TmJ-fY-H1V"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eVx-WH-g19">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="H9b-oy-QSk" kind="relationship" relationship="rootViewController" id="LIM-qq-nDZ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Riw-SA-76k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="461.83206106870227" y="662.67605633802816"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="figure.walk" catalog="system" width="95" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
