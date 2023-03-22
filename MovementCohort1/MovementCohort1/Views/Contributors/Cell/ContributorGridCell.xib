@@ -11,7 +11,7 @@
         <array key="Photograph Signature.ttf">
             <string>PhotographSignature</string>
         </array>
-        <array key="warsawgothic.otf">
+        <array key="WarsawGothic.otf">
             <string>WarsawGothic</string>
         </array>
     </customFonts>
@@ -28,74 +28,122 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xAK-cs-S2I">
                         <rect key="frame" x="0.0" y="0.0" width="180" height="187"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pk7-mh-3Gb">
-                                <rect key="frame" x="0.0" y="0.0" width="180" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pk7-mh-3Gb">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="122"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="khadia-header" translatesAutoresizingMaskIntoConstraints="NO" id="g5i-Zh-MRz">
-                                        <rect key="frame" x="15" y="-12" width="150" height="122"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUI-53-G0l">
+                                        <rect key="frame" x="0.0" y="50" width="180" height="72"/>
+                                        <color key="backgroundColor" name="baseDarkGray"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYn-CS-bQ1">
+                                        <rect key="frame" x="0.0" y="27" width="180" height="95"/>
+                                        <color key="backgroundColor" name="baseDarkGray"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="khadia-header" translatesAutoresizingMaskIntoConstraints="NO" id="g5i-Zh-MRz">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="122"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" name="backgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="FYn-CS-bQ1" secondAttribute="bottom" id="7ww-GS-ciP"/>
+                                    <constraint firstItem="GUI-53-G0l" firstAttribute="top" secondItem="Pk7-mh-3Gb" secondAttribute="top" constant="50" id="Dnu-6x-4go"/>
+                                    <constraint firstItem="GUI-53-G0l" firstAttribute="leading" secondItem="Pk7-mh-3Gb" secondAttribute="leading" id="OjZ-Gr-HdE"/>
+                                    <constraint firstAttribute="bottom" secondItem="GUI-53-G0l" secondAttribute="bottom" id="Ow6-xg-7oG"/>
+                                    <constraint firstItem="FYn-CS-bQ1" firstAttribute="top" secondItem="Pk7-mh-3Gb" secondAttribute="top" constant="27" id="PEc-6h-Omj"/>
+                                    <constraint firstAttribute="trailing" secondItem="FYn-CS-bQ1" secondAttribute="trailing" id="cl2-Qy-jcU"/>
+                                    <constraint firstItem="FYn-CS-bQ1" firstAttribute="leading" secondItem="Pk7-mh-3Gb" secondAttribute="leading" id="fW9-4R-UA2"/>
+                                    <constraint firstAttribute="trailing" secondItem="GUI-53-G0l" secondAttribute="trailing" id="hUL-NG-FQ7"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Mm-DR-9gk">
-                                <rect key="frame" x="0.0" y="109" width="180" height="78"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Mm-DR-9gk">
+                                <rect key="frame" x="0.0" y="122" width="180" height="65"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOUTH STORYTELLER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AeY-AR-4FD">
-                                        <rect key="frame" x="37" y="49" width="106" height="12"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUTH STORYTELLER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AeY-AR-4FD">
+                                        <rect key="frame" x="0.0" y="51" width="180" height="11"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                         <color key="textColor" name="labelColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Khadya" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ct6-Hd-VPm">
-                                        <rect key="frame" x="53" y="-12" width="63" height="43"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="PhotographSignature" family="Photograph Signature" pointSize="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SECK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ax-nP-wRq">
+                                        <rect key="frame" x="0.0" y="24.333333333333343" width="180" height="26.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="WarsawGothic" family="Warsaw Gothic" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SECK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ax-nP-wRq">
-                                        <rect key="frame" x="69" y="14" width="31" height="27"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="WarsawGothic" family="Warsaw Gothic" pointSize="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Khadya" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ct6-Hd-VPm">
+                                        <rect key="frame" x="0.0" y="-1" width="180" height="26"/>
+                                        <fontDescription key="fontDescription" name="PhotographSignature" family="Photograph Signature" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" name="titleBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="AeY-AR-4FD" firstAttribute="top" secondItem="2ax-nP-wRq" secondAttribute="bottom" constant="-1.4210854715202004e-14" id="8yV-qY-BnJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ct6-Hd-VPm" secondAttribute="trailing" id="FbQ-4v-vmi"/>
+                                    <constraint firstItem="2ax-nP-wRq" firstAttribute="leading" secondItem="6Mm-DR-9gk" secondAttribute="leading" id="coF-8t-smz"/>
+                                    <constraint firstItem="Ct6-Hd-VPm" firstAttribute="top" secondItem="6Mm-DR-9gk" secondAttribute="top" constant="-1" id="iGZ-v0-veB"/>
+                                    <constraint firstItem="AeY-AR-4FD" firstAttribute="leading" secondItem="6Mm-DR-9gk" secondAttribute="leading" id="iga-6k-Zs7"/>
+                                    <constraint firstAttribute="trailing" secondItem="AeY-AR-4FD" secondAttribute="trailing" id="lkQ-Vj-4Cg"/>
+                                    <constraint firstAttribute="bottom" secondItem="AeY-AR-4FD" secondAttribute="bottom" constant="3" id="qm1-gK-Y96"/>
+                                    <constraint firstItem="Ct6-Hd-VPm" firstAttribute="leading" secondItem="6Mm-DR-9gk" secondAttribute="leading" id="r8F-e3-5aO"/>
+                                    <constraint firstAttribute="trailing" secondItem="2ax-nP-wRq" secondAttribute="trailing" id="uiE-BL-r4U"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Pk7-mh-3Gb" firstAttribute="top" secondItem="xAK-cs-S2I" secondAttribute="top" id="7XY-KJ-4S4"/>
+                            <constraint firstItem="6Mm-DR-9gk" firstAttribute="top" secondItem="xAK-cs-S2I" secondAttribute="top" constant="122" id="HrM-pb-OJC"/>
+                            <constraint firstItem="6Mm-DR-9gk" firstAttribute="top" secondItem="Pk7-mh-3Gb" secondAttribute="bottom" id="JD0-MS-GIJ"/>
+                            <constraint firstItem="Pk7-mh-3Gb" firstAttribute="leading" secondItem="xAK-cs-S2I" secondAttribute="leading" id="Myb-2Z-cxe"/>
+                            <constraint firstAttribute="trailing" secondItem="6Mm-DR-9gk" secondAttribute="trailing" id="NdL-TL-iiB"/>
+                            <constraint firstItem="6Mm-DR-9gk" firstAttribute="leading" secondItem="xAK-cs-S2I" secondAttribute="leading" id="YMx-bF-Ya7"/>
+                            <constraint firstAttribute="bottom" secondItem="6Mm-DR-9gk" secondAttribute="bottom" id="dTa-Q2-x0g"/>
+                            <constraint firstAttribute="trailing" secondItem="Pk7-mh-3Gb" secondAttribute="trailing" id="kfA-41-833"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="xAK-cs-S2I" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Gq8-8h-aOE"/>
-                <constraint firstAttribute="bottom" secondItem="xAK-cs-S2I" secondAttribute="bottom" id="cD1-86-bqt"/>
-                <constraint firstAttribute="trailing" secondItem="xAK-cs-S2I" secondAttribute="trailing" id="eIG-ZX-hf6"/>
-                <constraint firstItem="xAK-cs-S2I" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gk0-L5-ewE"/>
+                <constraint firstAttribute="trailing" secondItem="xAK-cs-S2I" secondAttribute="trailing" id="74d-8B-nLb"/>
+                <constraint firstItem="xAK-cs-S2I" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jH6-ck-1KC"/>
+                <constraint firstAttribute="bottom" secondItem="xAK-cs-S2I" secondAttribute="bottom" id="maw-qd-lsh"/>
+                <constraint firstItem="xAK-cs-S2I" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="o6b-Bm-5UM"/>
             </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="138.93129770992365" y="19.366197183098592"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="khadia-header" width="380" height="328"/>
-        <namedColor name="backgroundColor">
-            <color red="0.094117647058823528" green="0.094117647058823528" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="baseDarkGray">
+            <color red="0.093999996781349182" green="0.093999996781349182" blue="0.093999996781349182" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="labelColor">
             <color red="0.22352941176470589" green="0.58039215686274515" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

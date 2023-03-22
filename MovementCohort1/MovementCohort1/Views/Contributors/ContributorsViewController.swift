@@ -10,13 +10,12 @@ class ContributorsViewController: UIViewController {
     @IBOutlet weak var btnListGrid: UIButton!
     
     private var listType: ListType = .list
-    
     private var dataSource: UICollectionViewDiffableDataSource<ContributorSection, ContributorItem>!
     private var snapshot = NSDiffableDataSourceSnapshot<ContributorSection, ContributorItem>()
     private var sections: [ContributorSection] = []
     
     lazy var collectionViewLayout: UICollectionViewLayout = {
-        let layout = UICollectionViewCompositionalLayout { [weak self] (sectionIndex, environment) -> NSCollectionLayoutSection? in
+        let layout = UICollectionViewCompositionalLayout { [weak self] (sectionIndex, _) -> NSCollectionLayoutSection? in
             guard let self = self else { return nil }
             
             let snapshot = self.dataSource.snapshot()
@@ -33,7 +32,6 @@ class ContributorsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         initialize()
     }
     
@@ -41,7 +39,7 @@ class ContributorsViewController: UIViewController {
         setupCollectionView()
         configureDataSource()
         createListData()
-        btnListGrid.isHidden = false
+        //btnListGrid.isHidden = false
     }
     
     private func setupCollectionView() {
@@ -110,19 +108,23 @@ class ContributorsViewController: UIViewController {
     
     @IBAction func onListSwitchTapped(_ sender: Any) {
         if listType == .list {
-            createListData()
             listType = .grid
-            btnListGrid.setImage(UIImage(systemName: "square.grid.2x2.fill" ), for: .normal)
+            btnListGrid.setImage(UIImage(systemName: "rectangle.grid.1x2.fill"  ), for: .normal)
+            createGridData()
             btnListGrid.isHidden = false
             
         } else {
-            createGridData()
-            listType = .list
-            btnListGrid.setImage(UIImage(systemName: "rectangle.grid.1x2.fill"), for: .normal)
             
+            listType = .list
+            btnListGrid.setImage(UIImage(systemName: "square.grid.2x2.fill" ), for: .normal)
+            createListData()
+            btnListGrid.isHidden = false
         }
     }
 }
+
+
+
 
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
