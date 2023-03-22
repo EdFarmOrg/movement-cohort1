@@ -22,6 +22,14 @@
 		46F2097C2988B11800DB9F7C /* WalksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F2097B2988B11800DB9F7C /* WalksViewController.swift */; };
 		46F2097E2988B12D00DB9F7C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F2097D2988B12D00DB9F7C /* LoginViewController.swift */; };
 		46F209822988BA4400DB9F7C /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F209812988BA4400DB9F7C /* RegistrationViewController.swift */; };
+		8BF4C51B29CB686B008723F6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF4C51A29CB686B008723F6 /* Coordinator.swift */; };
+		8BF4C51E29CB6D08008723F6 /* WalksCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF4C51C29CB6D08008723F6 /* WalksCoordinator.swift */; };
+		8BF4C51F29CB6D08008723F6 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF4C51D29CB6D08008723F6 /* MainCoordinator.swift */; };
+		8BF4C52229CB6D6E008723F6 /* ContributorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF4C52029CB6D6E008723F6 /* ContributorCoordinator.swift */; };
+		8BF4C52329CB6D6E008723F6 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF4C52129CB6D6E008723F6 /* HomeCoordinator.swift */; };
+		8BF4C52529CB6D7D008723F6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF4C52429CB6D7D008723F6 /* AppCoordinator.swift */; };
+		8BF4C52729CB6DD0008723F6 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF4C52629CB6DD0008723F6 /* MainTabBarController.swift */; };
+		8BF4C52929CB6F3E008723F6 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF4C52829CB6F3E008723F6 /* Storyboarded.swift */; };
 		9F138FA929AD1E8A005A130F /* HomeCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F138FA829AD1E8A005A130F /* HomeCardCell.xib */; };
 		9F138FAD29AD3518005A130F /* FilterBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F138FAC29AD3518005A130F /* FilterBackgroundView.swift */; };
 		9F20581E29A004ED00083194 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F20581C29A004ED00083194 /* FilterCell.swift */; };
@@ -62,7 +70,6 @@
 		C4118C0529A959A20060086B /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4118C0229A959A20060086B /* UICollectionView+Extension.swift */; };
 		C4118C0729A959A20060086B /* RegisterableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4118C0429A959A20060086B /* RegisterableView.swift */; };
 		C4E7172829A924CE00FC1263 /* ContributorGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7172629A924CE00FC1263 /* ContributorGridCell.swift */; };
-		C4E7172929A924CE00FC1263 /* ContributorGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4E7172729A924CE00FC1263 /* ContributorGridCell.xib */; };
 		C4EA1BF129A56FD1007AF5E2 /* ContributorSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EA1BF029A56FD1007AF5E2 /* ContributorSection.swift */; };
 		C4EA1BF329A56FE2007AF5E2 /* ContributorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EA1BF229A56FE2007AF5E2 /* ContributorItem.swift */; };
 		C4EA1BF729A5702F007AF5E2 /* ContributorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EA1BF529A5702F007AF5E2 /* ContributorCell.swift */; };
@@ -90,6 +97,14 @@
 		46F2097B2988B11800DB9F7C /* WalksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalksViewController.swift; sourceTree = "<group>"; };
 		46F2097D2988B12D00DB9F7C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		46F209812988BA4400DB9F7C /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		8BF4C51A29CB686B008723F6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		8BF4C51C29CB6D08008723F6 /* WalksCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalksCoordinator.swift; sourceTree = "<group>"; };
+		8BF4C51D29CB6D08008723F6 /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		8BF4C52029CB6D6E008723F6 /* ContributorCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributorCoordinator.swift; sourceTree = "<group>"; };
+		8BF4C52129CB6D6E008723F6 /* HomeCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		8BF4C52429CB6D7D008723F6 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		8BF4C52629CB6DD0008723F6 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		8BF4C52829CB6F3E008723F6 /* Storyboarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		9F138FA829AD1E8A005A130F /* HomeCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCardCell.xib; sourceTree = "<group>"; };
 		9F138FAC29AD3518005A130F /* FilterBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBackgroundView.swift; sourceTree = "<group>"; };
 		9F20581C29A004ED00083194 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
@@ -213,6 +228,7 @@
 		46F209562988B00600DB9F7C /* MovementCohort1 */ = {
 			isa = PBXGroup;
 			children = (
+				8BF4C51929CB6832008723F6 /* Coordinators */,
 				C4EA1BFB29A69157007AF5E2 /* Utilities */,
 				C4EA1BEC29A566F5007AF5E2 /* Fonts */,
 				46EDC2EF298974CE00EAF339 /* App */,
@@ -259,6 +275,20 @@
 				46EDC2F7298974F500EAF339 /* Registration */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		8BF4C51929CB6832008723F6 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				8BF4C52829CB6F3E008723F6 /* Storyboarded.swift */,
+				8BF4C52429CB6D7D008723F6 /* AppCoordinator.swift */,
+				8BF4C51D29CB6D08008723F6 /* MainCoordinator.swift */,
+				8BF4C52029CB6D6E008723F6 /* ContributorCoordinator.swift */,
+				8BF4C52129CB6D6E008723F6 /* HomeCoordinator.swift */,
+				8BF4C51C29CB6D08008723F6 /* WalksCoordinator.swift */,
+				8BF4C51A29CB686B008723F6 /* Coordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		9F138FAA29AD1ED0005A130F /* Filter Header */ = {
@@ -487,6 +517,7 @@
 		C4EA1BFB29A69157007AF5E2 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				8BF4C52629CB6DD0008723F6 /* MainTabBarController.swift */,
 				C4118C0429A959A20060086B /* RegisterableView.swift */,
 				C4118C0229A959A20060086B /* UICollectionView+Extension.swift */,
 				C4EA1BFC29A69181007AF5E2 /* LayoutSection.swift */,
@@ -586,13 +617,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BF4C52529CB6D7D008723F6 /* AppCoordinator.swift in Sources */,
 				9F138FAD29AD3518005A130F /* FilterBackgroundView.swift in Sources */,
+				8BF4C52729CB6DD0008723F6 /* MainTabBarController.swift in Sources */,
 				9F6D98DE29CA1FCA007E2669 /* StoryContributorCell.swift in Sources */,
+				8BF4C51B29CB686B008723F6 /* Coordinator.swift in Sources */,
 				9FDE8B9129C41F6A005AB3BB /* BannerCell.swift in Sources */,
 				9F9C1C8729AFBB590023BDF5 /* UIColor+Extension.swift in Sources */,
 				46EDC2F4298974CE00EAF339 /* AppDelegate.swift in Sources */,
 				C4118C0729A959A20060086B /* RegisterableView.swift in Sources */,
+				8BF4C51E29CB6D08008723F6 /* WalksCoordinator.swift in Sources */,
 				C4EA1BF729A5702F007AF5E2 /* ContributorCell.swift in Sources */,
+				8BF4C52329CB6D6E008723F6 /* HomeCoordinator.swift in Sources */,
 				C4EA1BF329A56FE2007AF5E2 /* ContributorItem.swift in Sources */,
 				9FF03BEB2999F485009104F6 /* Bundle.swift in Sources */,
 				9FA870B429905C6B00A3D645 /* HomeItem.swift in Sources */,
@@ -618,7 +654,10 @@
 				C4EA1BF129A56FD1007AF5E2 /* ContributorSection.swift in Sources */,
 				C4E7172829A924CE00FC1263 /* ContributorGridCell.swift in Sources */,
 				9FDE8B9E29C428A3005AB3BB /* MediaBackgroundView.swift in Sources */,
+				8BF4C52929CB6F3E008723F6 /* Storyboarded.swift in Sources */,
 				46F2097C2988B11800DB9F7C /* WalksViewController.swift in Sources */,
+				8BF4C51F29CB6D08008723F6 /* MainCoordinator.swift in Sources */,
+				8BF4C52229CB6D6E008723F6 /* ContributorCoordinator.swift in Sources */,
 				9F99F8D329BF93F8004934A3 /* DetailSection.swift in Sources */,
 				9F8D231129BA52DE008F4B3A /* DetailHeaderCell.swift in Sources */,
 				9FDE8B9B29C425CD005AB3BB /* MediaHeader.swift in Sources */,
@@ -797,7 +836,6 @@
 				DEVELOPMENT_TEAM = BCKVL9BZPW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MovementCohort1/App/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -829,7 +867,6 @@
 				DEVELOPMENT_TEAM = BCKVL9BZPW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MovementCohort1/App/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

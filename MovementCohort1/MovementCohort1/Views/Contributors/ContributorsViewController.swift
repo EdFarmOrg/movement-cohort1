@@ -5,7 +5,7 @@ enum ListType {
     case list
 }
 
-class ContributorsViewController: UIViewController {
+class ContributorsViewController: UIViewController, Storyboarded {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var btnListGrid: UIButton!
     
@@ -33,6 +33,9 @@ class ContributorsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
+    }
+    
+    func start() {
     }
     
     private func initialize() {
