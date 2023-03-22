@@ -23,7 +23,7 @@ struct HomeSection: Hashable {
     }
     
     enum ItemSectiontype: String {
-        case scroller
+        case header
         case card
         case filter
     }
@@ -35,7 +35,7 @@ struct HomeSection: Hashable {
         init(rawValue: String) {
             self.rawValue = rawValue
         }
-        static let scroller = HomeSectionType(rawValue: HomeSection.ItemSectiontype.scroller.rawValue)
+        static let header = HomeSectionType(rawValue: HomeSection.ItemSectiontype.header.rawValue)
         static let card = HomeSectionType(rawValue: HomeSection.ItemSectiontype.card.rawValue)
         static let filter = HomeSectionType(rawValue: HomeSection.ItemSectiontype.filter.rawValue)
 

@@ -29,16 +29,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="484"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tFl-PS-ir6">
-                                <rect key="frame" x="20" y="384.66666666666669" width="335" height="69.333333333333314"/>
+                                <rect key="frame" x="20" y="383.66666666666669" width="335" height="70.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obO-lM-C2V">
-                                        <rect key="frame" x="0.0" y="40.666666666666629" width="335" height="28.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="41.666666666666629" width="335" height="28.666666666666671"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HONORING MARTIN LUTHER KING JR." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zoh-ab-ZEl">
-                                        <rect key="frame" x="0.0" y="4" width="335" height="32.666666666666664"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="HONORING MARTIN LUTHER KING JR." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zoh-ab-ZEl">
+                                        <rect key="frame" x="0.0" y="4" width="335" height="33.666666666666664"/>
                                         <fontDescription key="fontDescription" name="WarsawGothic" family="Warsaw Gothic" pointSize="28"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -55,7 +55,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1uv-bf-VAP">
-                                <rect key="frame" x="20" y="348.66666666666669" width="165.33333333333334" height="36"/>
+                                <rect key="frame" x="20" y="347.66666666666669" width="165.33333333333334" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="JAMAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hY-wH-Vbj">
                                         <rect key="frame" x="41" y="16.666666666666629" width="50" height="19.333333333333329"/>
@@ -98,17 +98,60 @@
                                     <constraint firstItem="acK-Xk-drz" firstAttribute="leading" secondItem="1uv-bf-VAP" secondAttribute="leading" id="tMC-WV-Lh5"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGH-8Y-E9N">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="4b8-1g-LU3">
+                                        <rect key="frame" x="16" y="8" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="bkn-KB-vDH"/>
+                                            <constraint firstAttribute="height" constant="24" id="jiC-e6-Pfh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content provided by:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vuk-oG-8d2">
+                                        <rect key="frame" x="46" y="7.0000000000000009" width="322" height="13.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" red="0.22352941176470587" green="0.58039215686274503" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birmingham Civil Rights Institute" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roB-ub-BVx">
+                                        <rect key="frame" x="46" y="20.333333333333332" width="329" height="13.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.094117647058823528" green="0.094117647058823528" blue="0.094117647058823528" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Vuk-oG-8d2" secondAttribute="trailing" constant="7" id="IPz-81-ddS"/>
+                                    <constraint firstAttribute="trailing" secondItem="roB-ub-BVx" secondAttribute="trailing" id="PGF-Sl-wcd"/>
+                                    <constraint firstItem="roB-ub-BVx" firstAttribute="leading" secondItem="4b8-1g-LU3" secondAttribute="trailing" constant="6" id="Tlp-eg-FZE"/>
+                                    <constraint firstItem="roB-ub-BVx" firstAttribute="top" secondItem="Vuk-oG-8d2" secondAttribute="bottom" id="eWp-K9-aR3"/>
+                                    <constraint firstItem="Vuk-oG-8d2" firstAttribute="top" secondItem="EGH-8Y-E9N" secondAttribute="top" constant="7" id="gPu-Ku-VVH"/>
+                                    <constraint firstItem="4b8-1g-LU3" firstAttribute="top" secondItem="EGH-8Y-E9N" secondAttribute="top" constant="8" id="j7l-zl-bUA"/>
+                                    <constraint firstItem="Vuk-oG-8d2" firstAttribute="leading" secondItem="4b8-1g-LU3" secondAttribute="trailing" constant="6" id="jRe-jC-79h"/>
+                                    <constraint firstItem="4b8-1g-LU3" firstAttribute="leading" secondItem="EGH-8Y-E9N" secondAttribute="leading" constant="16" id="jqo-8O-Hoz"/>
+                                    <constraint firstAttribute="bottom" secondItem="4b8-1g-LU3" secondAttribute="bottom" constant="8" id="mBA-B4-QTr"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="placeholderTextColor"/>
                         <constraints>
+                            <constraint firstItem="1uv-bf-VAP" firstAttribute="top" secondItem="EGH-8Y-E9N" secondAttribute="bottom" constant="307.67000000000002" id="AQX-wT-UFJ"/>
                             <constraint firstAttribute="trailing" secondItem="tFl-PS-ir6" secondAttribute="trailing" constant="20" id="Bah-L3-blX"/>
                             <constraint firstAttribute="bottom" secondItem="ZCI-Cb-31X" secondAttribute="bottom" id="Hkc-QU-a26"/>
+                            <constraint firstItem="EGH-8Y-E9N" firstAttribute="leading" secondItem="uiz-29-nWC" secondAttribute="leading" id="PLF-Jz-2cZ"/>
                             <constraint firstItem="1uv-bf-VAP" firstAttribute="leading" secondItem="uiz-29-nWC" secondAttribute="leading" constant="20" id="SPO-hT-cFC"/>
                             <constraint firstItem="tFl-PS-ir6" firstAttribute="leading" secondItem="uiz-29-nWC" secondAttribute="leading" constant="20" id="Snp-NR-uOy"/>
+                            <constraint firstAttribute="trailing" secondItem="EGH-8Y-E9N" secondAttribute="trailing" id="UJi-N4-pHz"/>
                             <constraint firstAttribute="bottom" secondItem="tFl-PS-ir6" secondAttribute="bottom" constant="30" id="USM-ha-vh6"/>
                             <constraint firstAttribute="trailing" secondItem="ZCI-Cb-31X" secondAttribute="trailing" id="dQH-9A-AAc"/>
+                            <constraint firstAttribute="trailing" secondItem="EGH-8Y-E9N" secondAttribute="trailing" id="gcZ-9Q-RMN"/>
                             <constraint firstItem="ZCI-Cb-31X" firstAttribute="leading" secondItem="uiz-29-nWC" secondAttribute="leading" id="iUg-38-phM"/>
                             <constraint firstItem="tFl-PS-ir6" firstAttribute="top" secondItem="1uv-bf-VAP" secondAttribute="bottom" id="j8B-Op-fkh"/>
+                            <constraint firstItem="EGH-8Y-E9N" firstAttribute="top" secondItem="uiz-29-nWC" secondAttribute="top" id="kvZ-BX-6vG"/>
+                            <constraint firstItem="EGH-8Y-E9N" firstAttribute="top" secondItem="uiz-29-nWC" secondAttribute="top" id="lRm-Rn-oTJ"/>
+                            <constraint firstItem="EGH-8Y-E9N" firstAttribute="leading" secondItem="uiz-29-nWC" secondAttribute="leading" id="pID-Pe-J37"/>
                             <constraint firstItem="ZCI-Cb-31X" firstAttribute="top" secondItem="uiz-29-nWC" secondAttribute="top" id="rAu-qI-HRN"/>
                         </constraints>
                     </view>

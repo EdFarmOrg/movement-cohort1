@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Photograph Signature.ttf">
+            <string>PhotographSignature</string>
+        </array>
+        <array key="warsawgothic.otf">
+            <string>WarsawGothic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MediaHeader" customModule="MovementCohort1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfl-TY-LeX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STORY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfr-b8-Io2">
+                                <rect key="frame" x="0.0" y="8" width="48.333333333333336" height="34"/>
+                                <fontDescription key="fontDescription" name="WarsawGothic" family="Warsaw Gothic" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Media" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaE-s0-gB7">
+                                <rect key="frame" x="49.333333333333343" y="3" width="325.66666666666663" height="47"/>
+                                <fontDescription key="fontDescription" name="PhotographSignature" family="Photograph Signature" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Zfr-b8-Io2" firstAttribute="top" secondItem="dfl-TY-LeX" secondAttribute="top" constant="8" id="1Jw-nq-o1h"/>
+                            <constraint firstItem="JaE-s0-gB7" firstAttribute="top" secondItem="dfl-TY-LeX" secondAttribute="top" constant="3" id="4Nc-ad-i6B"/>
+                            <constraint firstItem="Zfr-b8-Io2" firstAttribute="leading" secondItem="dfl-TY-LeX" secondAttribute="leading" id="4PH-xz-P8d"/>
+                            <constraint firstItem="JaE-s0-gB7" firstAttribute="leading" secondItem="Zfr-b8-Io2" secondAttribute="trailing" constant="1" id="ACl-UY-mXU"/>
+                            <constraint firstAttribute="bottom" secondItem="JaE-s0-gB7" secondAttribute="bottom" id="Hxo-3l-yQ3"/>
+                            <constraint firstAttribute="trailing" secondItem="JaE-s0-gB7" secondAttribute="trailing" id="TZG-0Q-5FA"/>
+                            <constraint firstAttribute="bottom" secondItem="Zfr-b8-Io2" secondAttribute="bottom" constant="8" id="txf-ky-Gmd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="dfl-TY-LeX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="EzF-xt-3sT"/>
+                <constraint firstAttribute="bottom" secondItem="dfl-TY-LeX" secondAttribute="bottom" id="mho-6e-Mh2"/>
+                <constraint firstAttribute="trailing" secondItem="dfl-TY-LeX" secondAttribute="trailing" id="wjs-dn-Ygg"/>
+                <constraint firstItem="dfl-TY-LeX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="xFC-LU-95b"/>
+            </constraints>
+            <point key="canvasLocation" x="32.824427480916029" y="19.718309859154932"/>
+        </collectionViewCell>
+    </objects>
+</document>

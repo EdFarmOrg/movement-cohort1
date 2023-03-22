@@ -12,7 +12,7 @@ protocol HomeLayoutSection {
     static func card() -> NSCollectionLayoutSection
     static func filter() -> NSCollectionLayoutSection
 }
-
+//MARK: Home Layout Section
 struct HomeLayoutSectionFactory: HomeLayoutSection {
 
     static func scroller() -> NSCollectionLayoutSection {
