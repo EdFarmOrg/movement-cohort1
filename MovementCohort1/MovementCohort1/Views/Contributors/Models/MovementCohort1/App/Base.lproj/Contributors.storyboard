@@ -26,18 +26,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUI-g7-xgT">
-                                <rect key="frame" x="340" y="103" width="53" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="EF4-eq-FFp"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain"/>
-                                <connections>
-                                    <action selector="onListSwitchTapped:" destination="DQa-E2-0ha" eventType="touchUpInside" id="Y4N-z1-Fhu"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UEf-hu-mOL">
                                 <rect key="frame" x="20" y="182.66666666666669" width="353" height="669.33333333333326"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -49,6 +37,18 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUI-g7-xgT">
+                                <rect key="frame" x="320" y="110" width="53" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="EF4-eq-FFp"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="rectangle.grid.2x2.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="onListSwitchTapped:" destination="DQa-E2-0ha" eventType="touchUpInside" id="Y4N-z1-Fhu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gam-oB-gkq"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,10 +57,10 @@
                             <constraint firstItem="ftb-IT-y64" firstAttribute="leading" secondItem="gam-oB-gkq" secondAttribute="leading" constant="20" id="IPZ-Fk-fQL"/>
                             <constraint firstItem="ftb-IT-y64" firstAttribute="top" secondItem="gam-oB-gkq" secondAttribute="top" constant="11" id="KHf-Y3-W1S"/>
                             <constraint firstAttribute="bottom" secondItem="UEf-hu-mOL" secondAttribute="bottom" id="S3e-Va-5kG"/>
+                            <constraint firstItem="LUI-g7-xgT" firstAttribute="top" secondItem="gam-oB-gkq" secondAttribute="top" constant="7" id="SAn-jX-xIv"/>
                             <constraint firstItem="UEf-hu-mOL" firstAttribute="top" secondItem="ftb-IT-y64" secondAttribute="bottom" constant="18" id="Yn3-Vj-NYj"/>
                             <constraint firstItem="UEf-hu-mOL" firstAttribute="leading" secondItem="gam-oB-gkq" secondAttribute="leading" constant="20" id="hb3-Q1-siV"/>
                             <constraint firstItem="gam-oB-gkq" firstAttribute="trailing" secondItem="UEf-hu-mOL" secondAttribute="trailing" constant="20" id="kcX-Xx-oH8"/>
-                            <constraint firstItem="LUI-g7-xgT" firstAttribute="top" secondItem="gam-oB-gkq" secondAttribute="top" constant="11" id="mlk-Fu-Ybn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="r2R-2Y-IwH"/>
@@ -95,5 +95,6 @@
     </scenes>
     <resources>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <image name="rectangle.grid.2x2.fill" catalog="system" width="128" height="97"/>
     </resources>
 </document>
