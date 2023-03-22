@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="warsawgothic.otf">
+            <string>WarsawGothic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DetailHeaderCell" customModule="MovementCohort1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cyC-yD-fpm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="story-list-img" translatesAutoresizingMaskIntoConstraints="NO" id="qTz-iI-Lxn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OiB-fW-aQL">
+                                <rect key="frame" x="0.0" y="366.33333333333331" width="375" height="217.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zu6-B4-NWJ">
+                                        <rect key="frame" x="20" y="45.666666666666686" width="335" height="172"/>
+                                        <mutableString key="text">In the now infamous "Letter from a Birmingham Jail", Martin Luther King Jr. writes, "One day the South will know that when these disinherited children of God sat down at lunch counters, they were in reality standing up for what is best in the American dream..." 
+
+His words were prophetic: Birmingham's contribution to the Civil Rights Movement was only fully realized through the courage and sacrifices of youth activists. But who were these disinherited children of God? What were they fighting for? And how did they transform the Civil Rights Movement?</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="THE DISINHERITED CHILDREN OF GOD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tD-6V-GWj">
+                                        <rect key="frame" x="20" y="0.0" width="355" height="26.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="WarsawGothic" family="Warsaw Gothic" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zu6-B4-NWJ" firstAttribute="leading" secondItem="OiB-fW-aQL" secondAttribute="leading" constant="20" id="4gd-uw-Gve"/>
+                                    <constraint firstAttribute="trailing" secondItem="4tD-6V-GWj" secondAttribute="trailing" id="BI8-J0-PYg"/>
+                                    <constraint firstItem="zu6-B4-NWJ" firstAttribute="leading" secondItem="OiB-fW-aQL" secondAttribute="leading" constant="20" id="Hdx-yk-cBJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="zu6-B4-NWJ" secondAttribute="bottom" id="IpM-ky-kEH"/>
+                                    <constraint firstAttribute="trailing" secondItem="4tD-6V-GWj" secondAttribute="trailing" id="O3n-ju-I5E"/>
+                                    <constraint firstAttribute="trailing" secondItem="zu6-B4-NWJ" secondAttribute="trailing" constant="20" id="OrG-2k-DSj"/>
+                                    <constraint firstItem="4tD-6V-GWj" firstAttribute="leading" secondItem="OiB-fW-aQL" secondAttribute="leading" constant="20" id="RCQ-oR-Vir"/>
+                                    <constraint firstAttribute="trailing" secondItem="zu6-B4-NWJ" secondAttribute="trailing" constant="20" id="Shi-gl-Wm8"/>
+                                    <constraint firstItem="4tD-6V-GWj" firstAttribute="top" secondItem="OiB-fW-aQL" secondAttribute="top" id="XJc-Aq-VXX"/>
+                                    <constraint firstItem="4tD-6V-GWj" firstAttribute="top" secondItem="OiB-fW-aQL" secondAttribute="top" id="YEi-Wm-HOm"/>
+                                    <constraint firstItem="zu6-B4-NWJ" firstAttribute="top" secondItem="4tD-6V-GWj" secondAttribute="bottom" constant="19" id="f8h-KY-lI2"/>
+                                    <constraint firstItem="4tD-6V-GWj" firstAttribute="leading" secondItem="OiB-fW-aQL" secondAttribute="leading" constant="20" id="fYY-8z-YAE"/>
+                                    <constraint firstAttribute="bottom" secondItem="zu6-B4-NWJ" secondAttribute="bottom" id="hGy-BF-M80"/>
+                                    <constraint firstItem="zu6-B4-NWJ" firstAttribute="top" secondItem="4tD-6V-GWj" secondAttribute="bottom" constant="19" id="oRV-rr-54d"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Qn-hY-UVO">
+                                <rect key="frame" x="0.0" y="310" width="375" height="40.333333333333314"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="l0l-Xg-fJe">
+                                        <rect key="frame" x="20" y="0.0" width="34" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="BjU-hh-WH9"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="34" id="hrw-t6-XzU"/>
+                                            <constraint firstAttribute="width" constant="34" id="mpH-SM-sUq"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="r61-an-NKl"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAMAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvO-S9-Icd">
+                                        <rect key="frame" x="59" y="13" width="50" height="19"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WRITTEN BY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oY9-iy-4cp">
+                                        <rect key="frame" x="59" y="0.0" width="62" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" name="labelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MORANT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSj-ed-oYG">
+                                        <rect key="frame" x="109" y="12" width="75" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="XSj-ed-oYG" secondAttribute="bottom" constant="8.3300000000000001" id="BcB-cN-E8J"/>
+                                    <constraint firstAttribute="trailing" secondItem="oY9-iy-4cp" secondAttribute="trailing" constant="254" id="CQz-Xj-S3Y"/>
+                                    <constraint firstItem="bvO-S9-Icd" firstAttribute="top" secondItem="oY9-iy-4cp" secondAttribute="bottom" constant="1" id="J5Z-73-XXA"/>
+                                    <constraint firstItem="XSj-ed-oYG" firstAttribute="leading" secondItem="bvO-S9-Icd" secondAttribute="trailing" id="OCD-2J-7Ny"/>
+                                    <constraint firstItem="oY9-iy-4cp" firstAttribute="leading" secondItem="l0l-Xg-fJe" secondAttribute="trailing" constant="5" id="PNI-PK-gcj"/>
+                                    <constraint firstItem="l0l-Xg-fJe" firstAttribute="leading" secondItem="3Qn-hY-UVO" secondAttribute="leading" constant="20" id="WJW-B1-g1x"/>
+                                    <constraint firstAttribute="trailing" secondItem="XSj-ed-oYG" secondAttribute="trailing" constant="191" id="Y4J-s9-BJu"/>
+                                    <constraint firstItem="XSj-ed-oYG" firstAttribute="top" secondItem="oY9-iy-4cp" secondAttribute="bottom" id="b8U-mi-ZpZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="bvO-S9-Icd" secondAttribute="bottom" constant="8.3300000000000001" id="bxY-OT-4Mc"/>
+                                    <constraint firstItem="oY9-iy-4cp" firstAttribute="top" secondItem="3Qn-hY-UVO" secondAttribute="top" id="e2t-qr-qI0"/>
+                                    <constraint firstItem="bvO-S9-Icd" firstAttribute="leading" secondItem="l0l-Xg-fJe" secondAttribute="trailing" constant="5" id="eIz-cD-4xD"/>
+                                    <constraint firstItem="l0l-Xg-fJe" firstAttribute="top" secondItem="3Qn-hY-UVO" secondAttribute="top" id="lBs-9H-k8y"/>
+                                    <constraint firstAttribute="bottom" secondItem="l0l-Xg-fJe" secondAttribute="bottom" constant="6.3300000000000001" id="ok8-gm-hE8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="qTz-iI-Lxn" firstAttribute="top" secondItem="cyC-yD-fpm" secondAttribute="top" id="1wy-Ic-DqP"/>
+                            <constraint firstItem="3Qn-hY-UVO" firstAttribute="leading" secondItem="cyC-yD-fpm" secondAttribute="leading" id="Egn-B8-cvx"/>
+                            <constraint firstItem="OiB-fW-aQL" firstAttribute="top" secondItem="3Qn-hY-UVO" secondAttribute="bottom" constant="16" id="Nev-AU-gfq"/>
+                            <constraint firstAttribute="trailing" secondItem="OiB-fW-aQL" secondAttribute="trailing" id="S9c-7T-vhf"/>
+                            <constraint firstAttribute="bottom" secondItem="OiB-fW-aQL" secondAttribute="bottom" constant="16" id="WOy-8a-VdL"/>
+                            <constraint firstAttribute="bottom" secondItem="qTz-iI-Lxn" secondAttribute="bottom" id="cDX-MG-qp9"/>
+                            <constraint firstAttribute="trailing" secondItem="qTz-iI-Lxn" secondAttribute="trailing" id="dHV-Do-hJv"/>
+                            <constraint firstAttribute="trailing" secondItem="3Qn-hY-UVO" secondAttribute="trailing" id="nx8-FK-6DU"/>
+                            <constraint firstItem="3Qn-hY-UVO" firstAttribute="top" secondItem="cyC-yD-fpm" secondAttribute="top" constant="310" id="spH-rT-toM"/>
+                            <constraint firstItem="OiB-fW-aQL" firstAttribute="leading" secondItem="cyC-yD-fpm" secondAttribute="leading" id="tjK-3N-7Wf"/>
+                            <constraint firstItem="qTz-iI-Lxn" firstAttribute="leading" secondItem="cyC-yD-fpm" secondAttribute="leading" id="vUn-aH-cEP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="cyC-yD-fpm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4ER-UR-NZe"/>
+                <constraint firstAttribute="trailing" secondItem="cyC-yD-fpm" secondAttribute="trailing" id="RqR-eL-uAp"/>
+                <constraint firstItem="cyC-yD-fpm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ekD-hG-MsM"/>
+                <constraint firstAttribute="bottom" secondItem="cyC-yD-fpm" secondAttribute="bottom" id="woT-4m-U0Y"/>
+            </constraints>
+            <size key="customSize" width="242" height="75"/>
+            <point key="canvasLocation" x="179.38931297709922" y="28.169014084507044"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="avatar" width="32" height="33"/>
+        <image name="story-list-img" width="642" height="722"/>
+        <namedColor name="labelColor">
+            <color red="0.22352941176470589" green="0.58039215686274515" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

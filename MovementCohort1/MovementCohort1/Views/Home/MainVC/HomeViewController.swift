@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
             let sectionType = snapshot.sectionIdentifiers[sectionIndex].type
             
             switch sectionType {
-            case .scroller : return HomeLayoutSectionFactory.scroller()
+            case .header : return HomeLayoutSectionFactory.scroller()
             case .card : return HomeLayoutSectionFactory.card()
             case .filter : return HomeLayoutSectionFactory.filter()
             default: return nil
@@ -48,10 +48,11 @@ class HomeViewController: UIViewController {
         collectionView.register(HomeHeaderCell.nib, forCellWithReuseIdentifier: HomeHeaderCell.reuseIdentifer)
         collectionView.register(FilterCell.nib, forCellWithReuseIdentifier: FilterCell.reuseIdentifer)
         collectionView.register(HomeCardCell.nib, forCellWithReuseIdentifier: HomeCardCell.reuseIdentifer)
-        // Filter Section Header
+        // Filter Section Supplementary View
         collectionView.register(FilterHeader.nib, forSupplementaryViewOfKind: FilterHeader.kind, withReuseIdentifier: FilterHeader.reuseIdentifer)
         
         collectionView.collectionViewLayout = collectionViewLayout
+        
     }
     //MARK: Config CollectionView
     private func configureDataSource() {
@@ -63,7 +64,7 @@ class HomeViewController: UIViewController {
             let sectionType = snapshot.sectionIdentifiers[indexPath.section].type
             
             switch sectionType {
-            case .scroller:
+            case .header:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeHeaderCell.reuseIdentifer, for: indexPath)
                 return cell
             case .filter:
@@ -76,8 +77,9 @@ class HomeViewController: UIViewController {
                 return nil
             }
         }
+        //MARK: CollectionView Sections
             let sections = [
-                HomeSection(type: .scroller, items: [
+                HomeSection(type: .header, items: [
                 HomeItem()
                 ]),
                 HomeSection(type: .filter, items: [

@@ -15,9 +15,5 @@ class HomeHeaderCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
-//    func configure(with scroller: Item) {
-//        dump(scroller)
-//    }
-//
+
 }
