@@ -1,9 +1,9 @@
 import UIKit
 
-final class HomeCoordinator: Coordinator {
+final class HomeDetailCoordinator: Coordinator {
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    var viewController = HomeViewController.instantiate(name: .home)
+    var viewController = HomeDetailViewController.instantiate(name: .homeDetail)
     var section: HomeSection?
     var selectedItemIndex: Int = 0
     
@@ -19,15 +19,7 @@ final class HomeCoordinator: Coordinator {
     }
 }
 
-extension HomeCoordinator {
+extension HomeDetailCoordinator {
     func start() {
-        
-    }
-    
-    func showDetails() {
-        
-        let detailVc = UIStoryboard(name: "HomeDetail", bundle: nil).instantiateViewController(withIdentifier: "HomeDetailViewController") as! HomeDetailViewController
-        detailVc.selectedItemIndex = selectedItemIndex
-        navigationController.pushViewController(detailVc, animated: true)
     }
 }

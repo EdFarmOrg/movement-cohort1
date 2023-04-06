@@ -15,6 +15,7 @@ extension UIStoryboard {
         case walks = "Walks"
         case stories = "Stories"
         case contributors = "Contributors"
+        case homeDetail = "HomeDetail"
     
         var id: String {
             return rawValue

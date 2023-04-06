@@ -13,6 +13,8 @@ class HomeViewController: UIViewController, Storyboarded {
     @IBOutlet weak var collectionView: UICollectionView!
     private var dataSource: UICollectionViewDiffableDataSource<HomeSection, HomeItem>!
     let background = "background-element-kind"
+    var sections: [HomeSection] = []
+    weak var homeCoordinator: HomeCoordinator?
     
     lazy var collectionViewLayout: UICollectionViewCompositionalLayout = {
         let layout = UICollectionViewCompositionalLayout { [ weak self ] (sectionIndex, enviroment) ->
@@ -35,7 +37,9 @@ class HomeViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.collectionView.delegate = self
         initialize()
+        
     }
     
     func start() {
@@ -47,6 +51,7 @@ class HomeViewController: UIViewController, Storyboarded {
         configureDataSource()
         configureSupplementaryView()
     }
+    
     //MARK: Setup CollectionView
     private func setUpCollectionViews() {
         collectionView.register(HomeHeaderCell.nib, forCellWithReuseIdentifier: HomeHeaderCell.reuseIdentifer)
@@ -58,7 +63,7 @@ class HomeViewController: UIViewController, Storyboarded {
         collectionView.collectionViewLayout = collectionViewLayout
         
     }
-    //MARK: Config CollectionView
+    //MARK: Config CollectionDataSource
     private func configureDataSource() {
         dataSource = UICollectionViewDiffableDataSource<HomeSection, HomeItem>(collectionView: collectionView) { [weak self]
             (collectionView, indexPath, item) in
@@ -82,7 +87,7 @@ class HomeViewController: UIViewController, Storyboarded {
             }
         }
         //MARK: CollectionView Sections
-            let sections = [
+            self.sections = [
                 HomeSection(type: .header, items: [
                 HomeItem()
                 ]),
@@ -96,7 +101,7 @@ class HomeViewController: UIViewController, Storyboarded {
                 HomeItem(), HomeItem()
                 ])
             ]
-        
+            
             var snapshot = NSDiffableDataSourceSnapshot<HomeSection, HomeItem>()
             snapshot.appendSections(sections)
             sections.forEach { snapshot.appendItems($0.items, toSection: $0) }
@@ -106,30 +111,31 @@ class HomeViewController: UIViewController, Storyboarded {
     private func configureSupplementaryView() {
         dataSource.supplementaryViewProvider = { [ weak self ] (collectionView, kind, indexPath) in
             guard let self = self else { return UICollectionReusableView() }
-
+            
             let snapshot = self.dataSource.snapshot()
             let sectionKind = snapshot.sectionIdentifiers[indexPath.section].type
-
+            
             switch sectionKind {
             case .filter:
                 let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: FilterHeader.kind, withReuseIdentifier: FilterHeader.reuseIdentifer, for: indexPath)
                 return sectionHeader
-
+                
             default: return nil
             }
         }
     }
 }
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let snapshot = self.dataSource.snapshot()
+        let sectionKind = snapshot.sectionIdentifiers[indexPath.section].type
+        
+        if sectionKind == .card {
+            homeCoordinator?.showDetails()
+        }
     }
-    */
+}
 
 
 
