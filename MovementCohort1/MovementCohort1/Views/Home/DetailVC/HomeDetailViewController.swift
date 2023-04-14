@@ -7,12 +7,16 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class HomeDetailViewController: UIViewController, Storyboarded {
+    var selectedItemIndex: Int = 0
+    func start() {
+
+    }
 
     @IBOutlet weak var collectionView: UICollectionView!
     private var dataSource: UICollectionViewDiffableDataSource<DetailSection, DetailItem>!
     let background = "background-element-kind"
-
+    var section: HomeSection?
     
     lazy var collectionViewLayout: UICollectionViewCompositionalLayout = {
         let layout = UICollectionViewCompositionalLayout { [ weak self ] (sectionIndex, enviroment) ->
@@ -25,14 +29,19 @@ class DetailViewController: UIViewController {
             switch sectionType {
             case .header: return HomeDetailLayoutSectionFactory.header()
             case .banner: return HomeDetailLayoutSectionFactory.banner()
+            case .storyMedia: return HomeDetailLayoutSectionFactory.storyMedia()
             case .storyContributor: return HomeDetailLayoutSectionFactory.storyContributor()
-//            case .storyMedia: return HomeDetailLayoutSectionFactory.storyMedia()
+            case .thankYou: return HomeDetailLayoutSectionFactory.thankYou()
+            case .organization: return HomeDetailLayoutSectionFactory.organization()
+            case .wtmDescription: return HomeDetailLayoutSectionFactory.wtmDescription()
+            case .theme: return HomeDetailLayoutSectionFactory.theme()
             default: return nil
             }
         }
-        //Register Story Media background view
-//        layout.register(MediaBackgroundView.self, forDecorationViewOfKind: background)
-        layout.register(ContributorBackgroundView.self, forDecorationViewOfKind: background)
+        
+        //Register background view
+        layout.register(MediaBackgroundView.self, forDecorationViewOfKind: background)
+
         return layout
     }()
     
@@ -41,26 +50,33 @@ class DetailViewController: UIViewController {
         initalize()
     }
     
+    //MARK: Initialize
     private func initalize() {
         setUpCollectionView()
         configureDataSource()
         configureSupplementaryView()
     }
     
+    //MARK: Setup CollectionView
     private func setUpCollectionView() {
         collectionView.register(DetailHeaderCell.nib, forCellWithReuseIdentifier: DetailHeaderCell.reuseIdentifer)
         collectionView.register(BannerCell.nib, forCellWithReuseIdentifier: BannerCell.reuseIdentifer)
-//        collectionView.register(StoryMediaCell.nib, forCellWithReuseIdentifier: StoryMediaCell.reuseIdentifer)
-////        Story Media Header
-//        collectionView.register(MediaHeader.nib, forSupplementaryViewOfKind: MediaHeader.kind, withReuseIdentifier: MediaHeader.reuseIdentifer)
+        collectionView.register(StoryMediaCell.nib, forCellWithReuseIdentifier: StoryMediaCell.reuseIdentifer)
         collectionView.register(StoryContributorCell.nib, forCellWithReuseIdentifier: StoryContributorCell.reuseIdentifer)
-        collectionView.register(ContributorHeader.nib, forSupplementaryViewOfKind: ContributorHeader.kind, withReuseIdentifier: ContributorHeader.reuseIdentifer)
+        collectionView.register(ThankYouCell.nib, forCellWithReuseIdentifier: ThankYouCell.reuseIdentifer)
+        collectionView.register(OrganizationCell.nib, forCellWithReuseIdentifier: OrganizationCell.reuseIdentifer)
+        collectionView.register(WTMDescriptionCell.nib, forCellWithReuseIdentifier: WTMDescriptionCell.reuseIdentifer)
+        collectionView.register(ThemeCell.nib, forCellWithReuseIdentifier: ThemeCell.reuseIdentifer)
+        
+        // Story Header
+        collectionView.register(StoryHeader.nib, forSupplementaryViewOfKind: StoryHeader.kind, withReuseIdentifier: StoryHeader.reuseIdentifer)
         
         collectionView.collectionViewLayout = collectionViewLayout
         
         collectionView.contentInsetAdjustmentBehavior = .never
     }
     
+    //MARK: ConfigureDataSource
     private func configureDataSource() {
         dataSource = UICollectionViewDiffableDataSource<DetailSection, DetailItem>(collectionView: collectionView) { [ weak self ]
             (collectionView, indexPath, item) in
@@ -76,17 +92,30 @@ class DetailViewController: UIViewController {
             case .banner:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerCell.reuseIdentifer, for: indexPath)
                 return cell
-//            case .storyMedia:
-//                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryMediaCell.reuseIdentifer, for: indexPath)
-//                return cell
+            case .storyMedia:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryMediaCell.reuseIdentifer, for: indexPath)
+                return cell
             case .storyContributor:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryContributorCell.reuseIdentifer, for: indexPath)
+                return cell
+            case .thankYou:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ThankYouCell.reuseIdentifer, for: indexPath)
+                return cell
+            case .organization:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OrganizationCell.reuseIdentifer, for: indexPath)
+                return cell
+            case .wtmDescription:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WTMDescriptionCell.reuseIdentifer, for: indexPath)
+                return cell
+            case .theme:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ThemeCell.reuseIdentifer, for: indexPath)
                 return cell
             default:
                 return nil
             }
         }
         
+        //MARK: CollectionView Sections
         let sections = [
             DetailSection(type: .header, items: [
             DetailItem()
@@ -94,8 +123,26 @@ class DetailViewController: UIViewController {
             DetailSection(type: .banner, items: [
             DetailItem()
             ]),
-            DetailSection(type: .storyContributor, items: [
+            DetailSection(type: .storyMedia, items: [
+            DetailItem(), DetailItem(), DetailItem(),
+            DetailItem(), DetailItem(), DetailItem(),
+            DetailItem(), DetailItem(), DetailItem(),
             DetailItem()
+            ]),
+            DetailSection(type: .storyContributor, items: [
+            DetailItem(), DetailItem()
+            ]),
+            DetailSection(type: .thankYou, items: [
+            DetailItem()
+            ]),
+            DetailSection(type: .wtmDescription, items: [
+            DetailItem()
+            ]),
+            DetailSection(type: .organization, items: [
+            DetailItem(), DetailItem()
+            ]),
+            DetailSection(type: .theme, items: [
+            DetailItem(), DetailItem(), DetailItem()
             ])
         ]
         
@@ -115,11 +162,24 @@ class DetailViewController: UIViewController {
             let sectionKind = snapshot.sectionIdentifiers[indexPath.section].type
             
             switch sectionKind {
-//            case .storyMedia:
-//                let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: MediaHeader.kind, withReuseIdentifier: MediaHeader.reuseIdentifer, for: indexPath)
-//                return sectionHeader
+            case .storyMedia:
+                let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: StoryHeader.kind, withReuseIdentifier: StoryHeader.reuseIdentifer, for: indexPath) as! StoryHeader
+                sectionHeader.configure(with: "STORY", and: "Media")
+                return sectionHeader
+                
             case .storyContributor:
-                let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: ContributorHeader.kind, withReuseIdentifier: ContributorHeader.reuseIdentifer, for: indexPath)
+                let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: StoryHeader.kind, withReuseIdentifier: StoryHeader.reuseIdentifer, for: indexPath) as! StoryHeader
+                sectionHeader.configure(with: "STORY", and: "Contributors")
+                return sectionHeader
+                
+            case .wtmDescription:
+                let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: StoryHeader.kind, withReuseIdentifier: StoryHeader.reuseIdentifer, for: indexPath) as! StoryHeader
+                sectionHeader.configure(with: "WHAT'S THE", and: "Move")
+                return sectionHeader
+                
+            case .theme:
+                let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: StoryHeader.kind, withReuseIdentifier: StoryHeader.reuseIdentifer, for: indexPath) as! StoryHeader
+                sectionHeader.configure(with: "STORT", and: "Themes")
                 return sectionHeader
                 
             default: return nil
@@ -130,10 +190,12 @@ class DetailViewController: UIViewController {
 
 
 
+
+
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 
-struct DetailViewControllerRepresentable: UIViewControllerRepresentable {
+struct HomeDetailViewControllerRepresentable: UIViewControllerRepresentable {
 
     func makeUIViewController(context: Context) -> some UIViewController {
         return UIStoryboard(name: "Detail", bundle: nil).instantiateInitialViewController()!
@@ -146,7 +208,7 @@ struct DetailViewControllerRepresentable: UIViewControllerRepresentable {
 
 struct HomeDetailViewController_Preview: PreviewProvider {
     static var previews: some View {
-        DetailViewControllerRepresentable()
+        HomeDetailViewControllerRepresentable()
     }
 }
 #endif

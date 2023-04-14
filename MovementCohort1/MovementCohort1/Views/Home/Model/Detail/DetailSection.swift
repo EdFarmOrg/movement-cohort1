@@ -28,6 +28,10 @@ struct DetailSection: Hashable {
         case banner
         case storyMedia
         case storyContributor
+        case thankYou
+        case organization
+        case wtmDescription
+        case theme
     }
     
     struct DetailSectionType: RawRepresentable, Hashable {
@@ -42,5 +46,9 @@ struct DetailSection: Hashable {
         static let banner = DetailSectionType(rawValue: DetailSection.ItemSectiontype.banner.rawValue)
         static let storyMedia = DetailSectionType(rawValue: DetailSection.ItemSectiontype.storyMedia.rawValue)
         static let storyContributor = DetailSectionType(rawValue: DetailSection.ItemSectiontype.storyContributor.rawValue)
+        static let thankYou = DetailSectionType(rawValue: DetailSection.ItemSectiontype.thankYou.rawValue)
+        static let organization = DetailSectionType(rawValue: DetailSection.ItemSectiontype.organization.rawValue)
+        static let wtmDescription = DetailSectionType(rawValue: DetailSection.ItemSectiontype.wtmDescription.rawValue)
+        static let theme = DetailSectionType(rawValue: DetailSection.ItemSectiontype.theme.rawValue)
     }
 }

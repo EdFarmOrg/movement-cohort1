@@ -28,6 +28,11 @@
                 <constraint firstAttribute="bottom" secondItem="OAt-ZR-oTf" secondAttribute="bottom" id="ZPg-KH-Skn"/>
                 <constraint firstAttribute="trailing" secondItem="OAt-ZR-oTf" secondAttribute="trailing" id="hdF-4n-FlM"/>
             </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="5"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="33.587786259541986" y="19.718309859154932"/>
         </collectionViewCell>
     </objects>

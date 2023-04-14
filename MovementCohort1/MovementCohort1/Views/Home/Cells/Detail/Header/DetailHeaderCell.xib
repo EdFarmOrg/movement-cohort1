@@ -33,9 +33,9 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zu6-B4-NWJ">
                                         <rect key="frame" x="20" y="45.666666666666686" width="335" height="172"/>
-                                        <mutableString key="text">In the now infamous "Letter from a Birmingham Jail", Martin Luther King Jr. writes, "One day the South will know that when these disinherited children of God sat down at lunch counters, they were in reality standing up for what is best in the American dream..." 
+                                        <string key="text">In the now infamous "Letter from a Birmingham Jail", Martin Luther King Jr. writes, "One day the South will know that when these disinherited children of God sat down at lunch counters, they were in reality standing up for what is best in the American dream..." 
 
-His words were prophetic: Birmingham's contribution to the Civil Rights Movement was only fully realized through the courage and sacrifices of youth activists. But who were these disinherited children of God? What were they fighting for? And how did they transform the Civil Rights Movement?</mutableString>
+His words were prophetic: Birmingham's contribution to the Civil Rights Movement was only fully realized through the courage and sacrifices of youth activists. But who were these disinherited children of God? What were they fighting for? And how did they transform the Civil Rights Movement?</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>

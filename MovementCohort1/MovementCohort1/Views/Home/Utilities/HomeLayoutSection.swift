@@ -49,8 +49,6 @@ struct HomeLayoutSectionFactory: HomeLayoutSection {
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(70), heightDimension: .absolute(40))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-//        group.interItemSpacing = .fixed(10)
-        // Adding leading or trailing padding causes issues FIXED
         group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
         
         let section = NSCollectionLayoutSection(group: group)

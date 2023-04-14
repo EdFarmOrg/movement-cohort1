@@ -56,11 +56,10 @@
                                     <constraint firstAttribute="trailing" secondItem="6kx-H0-Uh7" secondAttribute="trailing" constant="20" id="Hhk-Ty-A39"/>
                                     <constraint firstItem="Ymm-nq-bKW" firstAttribute="top" secondItem="VMd-1q-0I0" secondAttribute="top" id="IDD-Gm-e6S"/>
                                     <constraint firstItem="2YN-Uc-3Dk" firstAttribute="top" secondItem="VMd-1q-0I0" secondAttribute="top" id="TT3-Qj-f8g"/>
+                                    <constraint firstItem="zTd-UZ-NDW" firstAttribute="leading" secondItem="Ymm-nq-bKW" secondAttribute="trailing" constant="1" id="U67-Q0-dwI"/>
                                     <constraint firstItem="6kx-H0-Uh7" firstAttribute="top" secondItem="Ymm-nq-bKW" secondAttribute="bottom" constant="1" id="YBs-cr-EBI"/>
                                     <constraint firstItem="6kx-H0-Uh7" firstAttribute="top" secondItem="zTd-UZ-NDW" secondAttribute="bottom" constant="1" id="clo-nI-O1b"/>
-                                    <constraint firstItem="zTd-UZ-NDW" firstAttribute="leading" secondItem="Ymm-nq-bKW" secondAttribute="trailing" constant="1" id="i0i-ae-w12"/>
                                     <constraint firstAttribute="bottom" secondItem="2YN-Uc-3Dk" secondAttribute="bottom" id="mUa-vf-dVg"/>
-                                    <constraint firstItem="Ymm-nq-bKW" firstAttribute="leading" secondItem="2YN-Uc-3Dk" secondAttribute="trailing" constant="172" id="mbM-lw-Hgt"/>
                                     <constraint firstAttribute="trailing" secondItem="zTd-UZ-NDW" secondAttribute="trailing" constant="20" id="vON-3E-N3P"/>
                                 </constraints>
                             </view>
